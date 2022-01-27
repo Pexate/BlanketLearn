@@ -9,8 +9,13 @@ BlanketLearn makes you grasp the basics in the above mentioned subject. Made for
 BlanketLearn was created by me (Tonči Crljen) for the InfoKup competition of the 7th and 8th grade. I absolutely love ICT and one day descided "why not register to the competition?" and here we are today! The InfoKup website can be found at https://informatika.azoo.hr/
 # Future plans
 × Add more topics and lectures to the site
+
 × Make educational videos describing the individual lectures
+
 × Add Firebase backend and then deploy it onto the internet for everyone to enjoy
+
 × Add more subjects (physics, geography, maybe maths)
+
 × Add an authentication and account managing system with Firebase
+
 × Add a counter displaying how many lectures have you done in a perticular group
