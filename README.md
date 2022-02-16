@@ -1,12 +1,12 @@
 # BlanketLearn
-Website to learn physics and ICT on Croatian all in the comfort of your bed!
+Website to learn ICT and programming on Croatian all in the comfort of your bed!
 # Sleek UI!
-Frontend made with Vue.js, intuitive and easy to navigate menus. 
+Frontend made with Vue.js, intuitive and easy to navigate menus. The code is responsible, therefore it works on mobile, desktop and tablet devices.
 ![banner](https://user-images.githubusercontent.com/86228282/146652027-f79772bb-3c5b-4289-b0db-6d7160157908.png)
 # Designed for anyone who wants basics in crucial computer skills!
-BlanketLearn makes you grasp the basics in the above mentioned subject. Made for anyone of all ages above 12 to learn something that they weren't taught or for someone who wants to relearn forgotten skills. The lectures are based on the school curriculum to ensure the best quality. 
+BlanketLearn makes you grasp the basics in the above mentioned subject. Made for anyone of all ages above 12 to learn something that they weren't taught or for someone who wants to relearn forgotten skills. The lectures are based on the school curriculum to ensure the best quality. The app also includes a quesionare and a word puzzle after every lecture to ensure mastering of the subject.
 # Made for the InfoKup competition in Croatia for the category "Razvoj Softvera"
-BlanketLearn was created by me (Tonči Crljen) for the InfoKup competition of the 7th and 8th grade. I absolutely love ICT and one day descided "why not register to the competition?" and here we are today! The InfoKup website can be found at https://informatika.azoo.hr/
+BlanketLearn was created by me (Tonči Crljen) for the InfoKup competition in the primary school competition. I absolutely love ICT and one day descided "why not register to the competition?" and here we are today! The InfoKup website can be found at https://informatika.azoo.hr/
 # Future plans
 × Add more topics and lectures to the site
 
