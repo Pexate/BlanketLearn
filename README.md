@@ -1,19 +1,24 @@
-# BlanketLearn
-Website to learn ICT and programming on Croatian all in the comfort of your bed!
-# Sleek UI!
-Frontend made with Vue.js, intuitive and easy to navigate menus. The code is responsible, therefore it works on mobile, desktop and tablet devices. Enjoy BlanketLearn anywhere!
-![banner](https://user-images.githubusercontent.com/86228282/146652027-f79772bb-3c5b-4289-b0db-6d7160157908.png)
-# Designed for anyone who wants basics in crucial computer skills!
-BlanketLearn makes you grasp the basics in ICT and programming. Made for anyone of all ages above 12 to learn something that they weren't taught or for someone who wants to relearn forgotten skills. The lectures are based on the school curriculum to ensure the best quality. The app also includes a quesionare and a word puzzle after every lecture to ensure mastering of the subject. 
-# Made for the InfoKup competition in Croatia for the category "Razvoj Softvera"
-BlanketLearn was created by me (Tonči Crljen) for the InfoKup competition in the primary school competition. I absolutely love ICT and one day descided "why not register to the competition?" and here we are today! The InfoKup website can be found at https://informatika.azoo.hr/. 
-# Future plans
-× Add more topics and lectures to the site, including the middle school curricilum
+# blanketlearn
 
-× Add Firebase backend and then deploy it onto the internet for everyone to enjoy
+## Project setup
+```
+npm install
+```
 
-× Add more subjects (physics, geography, maybe maths)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-× Add an authentication and account managing system with Firebase
+### Compiles and minifies for production
+```
+npm run build
+```
 
-× Add a counter displaying how many lectures have you done in a perticular group
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
