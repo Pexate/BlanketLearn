@@ -1,8 +1,10 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
-            <h2 class="header-h2">3. Račualno razmišljanje i programiranje</h2>
+            <h2 class="header-h2">3. Računalno razmišljanje i programiranje</h2>
         </div>
         <div class="main">
             <div class="main-header">
@@ -11,21 +13,21 @@
             </div>
             <div class="text">
                 <p>
-                    Pri izradi računalnih rješenja jedan je od prvih kooraka promišljanje o vrsti ulaznih podataka te načinu pohranjivanja tih podataka
-                    u spremniku računala. Određene varijable u Pythonu možemo funkcijama <span>int()</span>, <span>float()</span> te <span>str()</span> pretvarati u određenu vrstu podataka.
+                    Pri izradi računalnih rješenja jedan je od prvih koraka promišljanje o vrsti ulaznih podataka te načinu pohranjivanja tih podataka
+                    u spremnik računala. Određene varijable u Pythonu možemo funkcijama <span>int()</span>, <span>float()</span> te <span>str()</span> pretvarati u određenu vrstu podataka.
                 </p>
-                <h3>Mogu li se brojčane vrijednosti pohranjivati ili upotrebljavati kao znakove?</h3>
+                <h3>Mogu li se brojčane vrijednosti pohranjivati ili upotrebljavati kao znakovi?</h3>
                 <p>
-                    Sljedeća slika prikazuje dvije razlike između korištavanja operatora na cijelobrojni broj nasprama znakovnom nizu. U prvom primjeru smo jednostavno
-                    zbrojili 2 ista cijelobrojna brojeva, a u drugom primjeru smo, prije zbrajanja, te brojeve koristeči str() funkciju pretvorili u znakovne nizove, što je uzrokovalo
-                    spajanju dvaju nizova i dobili smo na kraju '55' umjesto 10.
+                    Sljedeća slika prikazuje dvije razlike između upotrebe operatora na cjelobrojni broj naspram znakovnog niza. U prvom primjeru smo jednostavno
+                    zbrojili 2 ista cijelobrojna brojeva, a u drugom primjeru smo, prije zbrajanja, te brojeve koristeći str() funkciju pretvorili u znakovne nizove, što je uzrokovalo
+                    spajanje dvaju nizova, pa smoo na kraju dobili '55' umjesto 10.
                 </p>
                 <div class="imgbox">
                     <img class="code-image3" src="./python9.png" alt="" />
                     <img class="code-image3" src="./python10.png" alt="" />
                 </div>
                 <p>
-                    U sljedećem primjeru možemo vidjeti da funkcija <span>len()</span> izbacuje duljinu zakovnog niza. Važno je napomenuti da se ubraja svaki
+                    U sljedećem primjeru možemo vidjeti da funkcija <span>len()</span> daje duljinu znakovnog niza. Važno je napomenuti da se ubraja svaki
                     znak, uključujući razmak, točku, zarez, slova itd.
                 </p>
                 <div class="align-image">
@@ -40,7 +42,7 @@
                 <p>
                     Ali koja je razlika između funkcije i metode? Razlika između metoda i funkcija je to što funkcije primaju
                     argumente unutar zagrada, a metode dodajemo na kraju argumenta tako da dodajemo točku pa ime metode. U sljedećem
-                    primjeru možemo to vidjeti.
+                    primjeru to možemo vidjeti.
                 </p>
                 <div class="align-image">
                     <img class="code-image edit" src="./python14.png" alt="" />
@@ -52,11 +54,15 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -142,8 +148,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60vw;
-  height: 20vh;
+  width: 70vw;
+  height: 27vh;
   margin-top: 15px;
   border: 10px solid #d4c224;
   text-align: center;
@@ -170,7 +176,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #d4c224;
 }
@@ -318,6 +324,13 @@ span {
   }
   .code-image2 {
       width: 95%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .header {
+    height: 32vh;
+    width: 100vw;
+    font-size: 0.9em;
   }
 }
 </style>

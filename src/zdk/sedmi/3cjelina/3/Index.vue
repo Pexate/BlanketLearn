@@ -1,8 +1,10 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
-            <h2 class="header-h2">3. Račualno razmišljanje i programiranje</h2>
+            <h2 class="header-h2">3. Računalno razmišljanje i programiranje</h2>
         </div>
         <div class="main">
             <div class="main-header">
@@ -17,7 +19,7 @@
                     kao karakter u znakovnom nizu.  <br><br>Elemente liste možemo dohvatiti <span>indeksom</span> određenog elementa tako da napišemo
                     ime varijable (liste) i pokraj nje unutar uglatih zagrada napišemo indeks određenog elementa. Elementi liste mogu biti različite
                     vrste podataka, a pišu se unutar uglatih zagrada ([ ]) i odvojeni su zarezom. Npr. [1, 2, 3] ili ["zovem", "se", "Tonči"]. 
-                     <br><br>U Pythonu možemo također <span>zbrajati (+)</span>i <span>množiti (*)</span> liste.  Kada zbrajamo liste, uvijek zbrajamo dvije 
+                     <br><br>U Pythonu također možemo <span>zbrajati (+)</span>, i <span>množiti (*)</span> liste.  Kada zbrajamo liste, uvijek zbrajamo dvije 
                     liste, a kada množimo jedan faktor mora biti lista, a drugi cijeli broj.
                 </p>
                 <div class="align-image">
@@ -46,12 +48,16 @@
                 <router-link to="/sedmi/3cjelina/4/" class="button-alignment2 button-alignment">Nastavi</router-link>
             </div>
         </div>
+    </div>
     </div> 
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -136,8 +142,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60vw;
-  height: 20vh;
+  width: 70vw;
+  height: 27vh;
   margin-top: 15px;
   border: 10px solid #d4c224;
   text-align: center;
@@ -164,7 +170,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #d4c224;
 }
@@ -309,6 +315,13 @@ span {
   .edit {
     height: 75px;
     width: 300px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .header {
+    height: 32vh;
+    width: 100vw;
+    font-size: 0.9em;
   }
 }
 </style>

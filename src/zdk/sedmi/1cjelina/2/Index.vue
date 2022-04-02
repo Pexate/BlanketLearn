@@ -1,4 +1,6 @@
 <template>
+  <div>
+     <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
   <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
@@ -63,7 +65,7 @@
                 <span>UTP (Unshielded twisted pair) kabeli</span> - Neoklopljene upletene parice, služe za spajanje dvaju uređaja, jedan koji šalje podatke, a drugi koji prima.
                 <br><br>
                 <span>TCP/IP</span> (Transmission Control Protocol, Internet Protocol) - Protokoli s kojima se odvija mrežna komunikacija i razmjena
-                paketa
+                paketa.
             </ul>
             <div class="align-images">
                 <img src="./router.png" alt="" class="image-border image2" />
@@ -85,7 +87,7 @@
             <ul>
                 <li><span>DSL</span> (Digital Subscriber Line) ili digitalne pretplatničke linije</li>
                 <li><span>Kabelske veze</span> (gdje postoji kabelska televizija)</li>
-                <li><span>Optičke veze</span> (gdje postoji optička infrastruktura, najčešće koriste napredni korisnici, podužeća, ustanove...)</li>
+                <li><span>Optičke veze</span> (gdje postoji optička infrastruktura, najčešće koriste napredni korisnici, poduzeća, ustanove...)</li>
                 <li><span>Mobilne mreže</span> (podatkovna i SIM kartica)</li>
                 <li><span>Javne mreže</span></li>
             </ul>
@@ -93,17 +95,17 @@
                 Brzina pristupa internetu
             </h3>  
             <p> 
-                Jeste li ikada doživjeli da kada želite neke internetske service kao što su YouTube, Google, Instagram, Tiktok,
-                Facebook... ponekad sve prestane se učitavati?
+                Jeste li ikada doživjeli da kada želite koristiti neke internetske servise kao što su YouTube, Google, Instagram, Tiktok,
+                Facebook... ponekad se sve prestane učitavati?
                 To je zato što je mreža opterečena i prima previše paketa.
                 <br><br>
                 Svaka mreža ima svoje <span>vrijeme odazivanja</span> (<span>span</span>), <span>brzinu preuzimanja</span> (<span>download speed</span>) i <span>brzinu slanja</span> (<span>upload speed</span>) koje
-                fluktuiraju
+                fluktuiraju.
                 <br><br>
                 Kada mreža prima više paketa nego što može podnijeti, mreža se usporava da može procesirati sve svoje pakete i slati ih
                 na svoju destinaciju ili se ugasi.
                 <br><br>
-                <span>Vrijeme odazivanja (ping) </span>mreže mjeri koliko treba milisekundi od slanja paketa vanjskem poslužiteljom do primanja istog
+                <span>Vrijeme odazivanja (ping) </span>mreže mjeri koliko milisekundi treba od slanja paketa vanjskosm poslužiteljom do primanja istog
                 paketa natrag.
                 <br><br>
                 <span>Brzina preuzimanja (download) </span>mreže mjeri koliko megabita u sekundi (Mbps) treba da mreža preuzme datoteku.
@@ -117,11 +119,15 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -221,7 +227,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #ed5e4a;
   text-align: left;

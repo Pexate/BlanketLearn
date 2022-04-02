@@ -1,8 +1,10 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
-            <h2 class="header-h2">3. Račualno razmišljanje i programiranje</h2>
+            <h2 class="header-h2">3. Računalno razmišljanje i programiranje</h2>
         </div>
         <div class="main">
             <div class="main-header">
@@ -11,22 +13,22 @@
             </div>
             <div class="text">
                 <p>
-                    U računalnim programima svaki slijed naredbi ima svoju ulogu. Jedan je dio naredbi zadužen a rad s ulaznim podatcima, neki je 
+                    U računalnim programima svaki slijed naredbi ima svoju ulogu. Jedan je dio naredbi zadužen za rad s ulaznim podatcima, neki je 
                     drugi dio zadužen za oblikovanje i prikazivanje rješenja, a dio naredbi bavi se obradom podataka prema zadanim uputama. Niz
-                    naredbi koji čine neku funkcijonalnu cjelinu dobro je izdvojiti kao neovisni dio programa. Takav niz naredbi nazivamo 
+                    naredbi koji čine neku funkcionalnu cjelinu dobro je izdvojiti kao neovisni dio programa. Takav niz naredbi nazivamo 
                     <span>funkcijom</span> ili <span>potprogramom</span>. 
                     <br><br>
-                    Do sada, upoznali smo se s nekoliko ugrađenih funkcija koje nudi Python kao što su <span>input()</span>,<span> print()></span>,
+                    Do sada smo se upoznali s nekoliko ugrađenih funkcija koje nudi Python kao što su <span>input()</span>,<span> print()</span>,
                     <span> int()</span>,<span> len()</span>..., ali također možemo samostalno napraviti naše funkcije.
                     <br><br>
-                    Funkcije u Pythonu radimo na način tako da pišemo klučnu riječ <span>def</span>, ime funkcije i zagrade unutar kojih se nalaze
+                    Funkcije u Pythonu radimo tako da pišemo ključnu riječ <span>def</span>, ime funkcije i zagrade unutar kojih se nalaze
                     <span>parametri</span>. <span>Parametri</span> su varijable koje se isključivo mogu koristiti unutar funkcije.
                     <br><br>
-                    Unutar funkcije pišemo naš blok koda, a na kraju je opcijalno <span>vratiti vrijednost</span>. 
+                    Unutar funkcije pišemo naš blok koda, a na kraju možemo, ali i ne moramo <span>vratiti vrijednost</span>. 
                     <br><br>
                     <span>Vraćanje vrijednosti</span> radi na način
                     da ako unutar varijable pozovemo funkciju, vrijednost varijable nakon izvršavanja funkcije biti će jednaka onoj vrijednosti koju 
-                    smo vratili. Vraćamo vrijednost tako na napišemo riječ <span>return</span> i nakon nje napišemo vrijednost koju vračamo.
+                    smo vratili. Vrijednost vraćamo tako na napišemo riječ <span>return</span> i nakon nje napišemo vrijednost koju vraćamo.
                 </p>  
                 <div class="align-image">
                     <img class="code-image code-image4" src="./python28.png" alt="" />
@@ -43,12 +45,16 @@
                 <router-link to="/learningpage" class="button-alignment2 button-alignment">Na odabir cjeline</router-link>
             </div>
         </div>
-    </div>  
+    </div> 
+    </div> 
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -134,8 +140,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60vw;
-  height: 20vh;
+  width: 70vw;
+  height: 27vh;
   margin-top: 15px;
   border: 10px solid #d4c224;
   text-align: center;
@@ -162,9 +168,16 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #d4c224;
+}
+@media only screen and (max-width: 300px) {
+  .header {
+    height: 32vh;
+    width: 100vw;
+    font-size: 0.9em;
+  }
 }
 .main-header {
   display: flex;

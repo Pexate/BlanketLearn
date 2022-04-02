@@ -29,6 +29,13 @@
                   <Section class="highlight-element3" name="3.6. Funkcije u Pythonu (potprogrami)" link="/sedmi/3cjelina/6/" colour="this.style.boxShadow = '0px 0px 10px 10px #d4c224'" colour1="#d4c224" />
               </div>
           </div>
+          <div class="sedmi-razred razred color-orange2">
+              <h2 class="wrapper-h2 color-orange">4. Višemedijska posla</h2>
+              <div class="section_alignment">
+                  <Section class="highlight-element4" name="4.1. Obilježja kvalitete grafičkog zapisa na zaslonu i pisaču" link="/sedmi/4cjelina/1/" colour="this.style.boxShadow = '0px 0px 10px 10px #d47024'" colour1="#d47024"/>
+                  <Section class="highlight-element4" name="4.2. Grafički, zvučni i videoformati datoteka" link="/sedmi/3cjelina/2/" colour="this.style.boxShadow = '0px 0px 10px 10px #d47024'" colour1="#d47024"/>
+              </div>
+          </div>
       </div>
   </div>
 </template>
@@ -86,6 +93,9 @@ export default {
 .color-green-yellow {
     color: #d4c224;
 }
+.color-orange {
+    color: #d47024;
+}
 .color-red2 {
     box-shadow: 0px 0px 10px 10px #ed5e4a;
 }
@@ -104,6 +114,12 @@ export default {
 .color-green-yellow2:hover {
     box-shadow: 0px 0px 20px 20px #d4c224;
 }
+.color-orange2 {
+    box-shadow: 0px 0px 10px 10px #d47024;
+}
+.color-orange2:hover {
+    box-shadow: 0px 0px 20px 20px #d47024;
+}
 .highlight-element1:hover {
     box-shadow: 0px 0px 10px 10px #ed5e4a;
     transition: all 0.07s ease;
@@ -114,6 +130,10 @@ export default {
 }
 .highlight-element3:hover {
     box-shadow: 0px 0px 10px 10px #d4c224;
+    transition: all 0.07s ease;
+}
+.highlight-element4:hover {
+    box-shadow: 0px 0px 10px 10px #d47024;
     transition: all 0.07s ease;
 }
 /*:onMouseEnter="colour" onMouseOut="this.style.boxShadow='0 0 0 0 rgba(0,0,0,0)'"*/

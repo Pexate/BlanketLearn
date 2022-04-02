@@ -1,6 +1,8 @@
 <template>
+    <div class="color">
+      <Navbar class="navbar1" :image="require('../../assets/inndex.jpg')" />
     <div class="outside-wrapper">
-        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.75)">3. Internet - život na mreži</h1>
+        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.75)">1. Internet - život na mreži</h1>
         <div class="div-pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgb(255, 0, 0, 0.75)">
             <div class="aligning">
                 <div class="pitanje">
@@ -16,14 +18,16 @@
                 </div>
                 <div class="bottom">
                     <button style="box-shadow: 0px 0px 5px 5px rgb(255, 0, 0, 0.5)" v-on:click="provjeriOdgovore">Provjeri</button>
-                    <button class="dalje"><a href="/sedmi/1cjelina/2/">Preskoći</a></button>
+                    <button class="dalje"><a href="/sedmi/1cjelina/2/">Preskoči</a></button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../components/NavBar.vue"
 const odgovori = [["korisničko-poslužiteljski model", "korisničko poslužiteljski model", "korisnicko-posluziteljski model", "korisničko-posluziteljski model", "korisnicko-poslužiteljski model", "korisnicko poslužiteljski model", "korisnicko posluziteljski", "korisnik posluzitelj", "korisničko poslužiteljski", "korisnik poslužiteljski"],
                   ["korisnik i poslužitelj", "korisnik poslužitelj", "korisnik posluzitelj", "korisnik i posluzitelj", "posluzitelj i korisnik", "poslužitelj i korisnik", "posluzitelj korisnik", "client i server", "client server", "server client", "server, client", "posluzitelj, korisnik", "server i client", "korisnik i server", "server i korisnik", "korisnik, server", "server, korisnik", "client i posluzitelj", "client i poslužitelj", "client, poslužitelj", "poslužitelj, client"],
                   ["upit, obrada, odgovor", "upit obrada odgovor", "upit, obrada i odgovor", "upit obrada i odgovor", "upit i obrada i odgovor"]]
@@ -57,6 +61,9 @@ export default {
             nastaviButton.classList.add("greenishyellow-color")
       }
     }
+  },
+  components: {
+    Navbar,
   }
 }
 </script>
@@ -66,6 +73,10 @@ template {
   margin: 0;
   padding: 0;
   border: 0;
+  background: #2D637F;
+}
+.color {
+  background: #2D637F;;
 }
 .pitanja {
   position: relative;
@@ -74,7 +85,7 @@ template {
   z-index: 1;
 }
 .outside-wrapper {
-  background: url(../questionmark.png) repeat-y;
+  background: url(../questionmark.png) repeat-y, #2D637F bottom;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -98,7 +109,7 @@ template {
   margin-top: -10px;
 }
 * {
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 .pitanje {
   color: white;

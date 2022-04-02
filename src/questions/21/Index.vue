@@ -1,6 +1,8 @@
 <template>
+  <div class="color">
+      <Navbar class="navbar1" :image="require('../../assets/inndex.jpg')" />
       <div class="outside-wrapper">
-        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #66919a">3. Internet - život na mreži</h1>
+        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #66919a">2. Proračunske tablice</h1>
         <div class="div-pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #66919a">
             <div class="aligning">
                 <div class="pitanje">
@@ -32,14 +34,16 @@
                 </div>
                 <div class="bottom">
                     <button style="box-shadow: 0px 0px 5px 5px #66919a" v-on:click="provjeriOdgovore()">Provjeri</button>
-                    <button class="dalje"><a href="/sedmi/2cjelina/2/">Preskoći</a></button>
+                    <button class="dalje"><router-link to="/sedmi/2cjelina/2/">Preskoči</router-link></button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../components/NavBar.vue"
 const odgovori = [["aktivna", "aktivna ćelija", "aktivna čelija", "aktivna celija"]]
 const multiple_choice_odgovori = ["three", "one"]
 export default {
@@ -81,7 +85,7 @@ export default {
                     } 
                 }
                 let nastaviButton = document.querySelector(".dalje")
-                nastaviButton.innerHTML = '<a style="text-decoration: none; color: white;" href="/sedmi/2cjelina/2/">Nastavi</a>'
+                nastaviButton.innerHTML = '<router-lnk style="text-decoration: none; color: white;" to="/sedmi/2cjelina/2/">Nastavi</router-link>'
                 nastaviButton.classList.add("greenishyellow-color")
                 /*
                 if (correct) {
@@ -92,7 +96,10 @@ export default {
                 */
             }
         }
-    }
+    },
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -138,7 +145,7 @@ template {
   margin-top: -10px;
 }
 * {
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 .pitanje {
   color: white;

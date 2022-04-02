@@ -1,10 +1,12 @@
 <template>
+  <div class="color">
+    <Navbar class="navbar1" :image="require('../../assets/inndex.jpg')" />
     <div class="outside-wrapper">
-        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.75)">3. Internet - život na mreži</h1>
+        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.75)">1. Internet - život na mreži</h1>
         <div class="div-pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgb(255, 0, 0, 0.75)">
             <div class="aligning">
                 <div class="pitanje">
-                    <h3 class="text-pitanja">1. Uzbaci uljeza:
+                    <h3 class="text-pitanja">1. Izbaci uljeza:
                         <select class="multiple-choice" name="pitanje-1" id="pitanje-1">
                             <option value="odaberi">Odaberi</option>
                             <option value="one">Discord</option>
@@ -16,7 +18,7 @@
                 </div>
                 <hr style="box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.75)">
                 <div class="pitanje">
-                    <h3 class="text-pitanja">2. IKT je skračenica kojoj puni naziv je:
+                    <h3 class="text-pitanja">2. IKT je skraćenica kojoj je puni naziv:
                         <select class="multiple-choice" name="pitanje-2" id="pitanje-2">
                             <option value="odaberi">Odaberi</option>
                             <option value="one">Informatičko i komputacijske tehnologije</option>
@@ -28,18 +30,20 @@
                 </div>
                 <hr style="box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.75)">
                 <div class="pitanje">
-                    <h3 class="text-pitanja">3. Informatički uređaj koji se masovno upotrebljava u svakodnevnici radnika za izvršavanje posla zove se <input class="answer" type="text"></h3>
+                    <h3 class="text-pitanja">3. Informatički uređaj koji se koristi u svakodnevnici različitih djelatnosti naziva se <input class="answer" type="text"></h3>
                 </div>
                 <div class="bottom">
                     <button style="box-shadow: 0px 0px 5px 5px rgb(255, 0, 0, 0.5)" v-on:click="provjeriOdgovore()">Provjeri</button>
-                    <button class="dalje"><a href="/learningpage">Preskoći</a></button>
+                    <button class="dalje"><a href="/learningpage">Preskoči</a></button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../components/NavBar.vue"
 const odgovori = [["računalo", "racunalo", "kompjuter", "komputer", "kompjunter", "raćunalo", "stolno računalo" , "stolno racunalo", "stolno raćunalo", "osobno računalo", "osobno raćunalo", "osobno racunalo"]]
 const multiple_choice_odgovori = ["four", "two"]
 
@@ -93,7 +97,10 @@ export default {
               */
           }
         }
-    }
+    },
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -139,7 +146,7 @@ template {
   margin-top: -10px;
 }
 * {
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 .pitanje {
   color: white;

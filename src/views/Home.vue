@@ -19,9 +19,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url("//db.onlinewebfonts.com/c/1c5965c2b1dcdea439b54c3ac60cee38?family=Ubuntu");
 * {
-  font-family: 'Ubuntu', Helvetica, Courier, monospace;
+  font-family: Helvetica, Courier, monospace, Arial;
 }
 
 .navbar1 { 

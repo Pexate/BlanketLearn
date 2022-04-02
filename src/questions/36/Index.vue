@@ -1,6 +1,8 @@
 <template>
+  <div class="color">
+    <Navbar class="navbar1" :image="require('../../assets/inndex.jpg')" />
     <div class="outside-wrapper">
-        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #d4c224">3. Internet - život na mreži</h1>
+        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #d4c224">3. Računalno razmišljanje i programiranje</h1>
         <div class="div-pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #d4c224">
             <div class="aligning">
                 <div class="pitanje">
@@ -32,14 +34,16 @@
                 </div>
                 <div class="bottom">
                     <button style="box-shadow: 0px 0px 5px 5px #d4c224" v-on:click="provjeriOdgovore()">Provjeri</button>
-                    <button class="dalje"><a href="/learningpage">Preskoći</a></button>
+                    <button class="dalje"><a href="/learningpage">Preskoči</a></button>
                 </div>
             </div>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
+import Navbar from "../../components/NavBar.vue"
 const odgovori = [["potprogrami", "potprogram", "podprogrami", "podprogram"]]
 const multiple_choice_odgovori = ["three", "two"]
 export default {
@@ -86,7 +90,10 @@ export default {
                 nastaviButton.classList.add("greenishyellow-color")
             }
         }
-    }
+    },
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -132,7 +139,7 @@ template {
   margin-top: -10px;
 }
 * {
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 .pitanje {
   color: white;

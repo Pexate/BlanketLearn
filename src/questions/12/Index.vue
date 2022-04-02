@@ -1,6 +1,8 @@
 <template>
-<div class="outside-wrapper">
-        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.75)">3. Internet - život na mreži</h1>
+<div class="color">
+  <Navbar class="navbar1" :image="require('../../assets/inndex.jpg')" />
+  <div class="outside-wrapper">
+        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.75)">1. Internet - život na mreži</h1>
         <div class="div-pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px rgb(255, 0, 0, 0.75)">
             <div class="aligning">
                 <div class="pitanje">
@@ -16,7 +18,7 @@
                 </div>
                 <hr style="box-shadow: 0px 0px 5px 5px rgba(255, 0, 0, 0.75)">
                 <div class="pitanje">
-                    <h3 class="text-pitanja">2. Odaberi pojam koji se odnosi na broj milisekundi potrebnih za primanja paketa kojega smo mi sami poslali:
+                    <h3 class="text-pitanja">2. Odaberi pojam koji se odnosi na koliko milisekundi treba za primanje paketa kojega smo mi sami poslali:
                         <select class="multiple-choice" name="pitanje-2" id="pitanje-2">
                             <option value="odaberi">Odaberi</option>
                             <option value="one">Ping</option>
@@ -32,14 +34,16 @@
                 </div>
                 <div class="bottom">
                     <button style="box-shadow: 0px 0px 5px 5px rgb(255, 0, 0, 0.5)" v-on:click="provjeriOdgovore()">Provjeri</button>
-                    <button class="dalje"><a href="/sedmi/1cjelina/3/">Preskoći</a></button>
+                    <button class="dalje"><a href="/sedmi/1cjelina/3/">Preskoči</a></button>
                 </div>
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../components/NavBar.vue"
 const odgovori = [["utp", "utp kabel", "upt", "upt kabel", "ptu kabel", "ptu", "utp žica", "utp ", " utp"]]
 const multiple_choice_odgovori = ["three", "one"]
 
@@ -93,7 +97,10 @@ export default {
     */
 }
         }
-    }
+    },
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -134,7 +141,7 @@ template {
   margin-top: -10px;
 }
 * {
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 .pitanje {
   color: white;

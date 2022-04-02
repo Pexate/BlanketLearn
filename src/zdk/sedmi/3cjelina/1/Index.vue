@@ -1,8 +1,10 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
-            <h2 class="header-h2">3. Račualno razmišljanje i programiranje</h2>
+            <h2 class="header-h2">3. Računalno razmišljanje i programiranje</h2>
         </div>
         <div class="main">
             <div style="background: none;" class="main-header">
@@ -136,11 +138,15 @@
             </div>
         </div>
     </div> 
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -226,8 +232,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60vw;
-  height: 20vh;
+  width: 70vw;
+  height: 27vh;
   margin-top: 15px;
   border: 10px solid #d4c224;
   text-align: center;
@@ -253,7 +259,7 @@ export default {
   margin: 25px 50px;
   padding: 25px;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #d4c224;
 }
@@ -355,6 +361,13 @@ span {
 @media only screen and (max-width: 420px) {
   .main {
     margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .header {
+    height: 32vh;
+    width: 100vw;
+    font-size: 0.9em;
   }
 }
 </style>

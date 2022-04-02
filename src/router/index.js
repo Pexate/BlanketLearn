@@ -15,6 +15,7 @@ import sedmi33 from '../zdk/sedmi/3cjelina/3/Index.vue'
 import sedmi34 from '../zdk/sedmi/3cjelina/4/Index.vue'
 import sedmi35 from '../zdk/sedmi/3cjelina/5/Index.vue'
 import sedmi36 from '../zdk/sedmi/3cjelina/6/Index.vue'
+import sedmi41 from '../zdk/sedmi/4cjelina/1/Index.vue'
 import question11 from '../questions/11/Index.vue'
 import question12 from '../questions/12/Index.vue'
 import question13 from '../questions/13/Index.vue'
@@ -27,6 +28,7 @@ import question33 from '../questions/33/Index.vue'
 import question34 from '../questions/34/Index.vue'
 import question35 from '../questions/35/Index.vue'
 import question36 from '../questions/36/Index.vue'
+import userlogin from '../views/UserLogin.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -106,6 +108,11 @@ const routes = [
     component: sedmi36
   },
   {
+    path: '/sedmi/4cjelina/1',
+    name: 'BlanketLearn',
+    component: sedmi41
+  },
+  {
     path: '/sedmi/1cjelina/question1',
     name: 'BlanketLearn',
     component: question11
@@ -164,6 +171,11 @@ const routes = [
     path: '/sedmi/3cjelina/question6',
     name: 'BlanketLearn',
     component: question36
+  },
+  {
+    path: '/userauth',
+    name: 'BlanketLearn - Prijava / Registracija',
+    component: userlogin
   },
 ]
 

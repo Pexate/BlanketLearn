@@ -1,8 +1,10 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
-            <h2 class="header-h2">3. Račualno razmišljanje i programiranje</h2>
+            <h2 class="header-h2">3. Računalno razmišljanje i programiranje</h2>
         </div>
         <div class="main">
             <div class="main-header">
@@ -12,19 +14,19 @@
             <div class="text">
                 <p>
                     Pri rješavanju zadataka često je potrebno pronaći određeni podatak ili njegovo mjesto u znakovnom nizu, 
-                    odnosno ispitati sadržava li zadani ni određenu vrijednost.
+                    odnosno ispitati sadržava li zadani niz određenu vrijednost.
 
                     Metodom <span>find()</span> pronalazimo mjesto na kojemu se nalazi neka vrijednost u zadanoj listi. Ona vraća indeks tog
                     elementa kojeg tražimo.
 
-                    U sljedećem primjeru možemo vidjeti primjere u kojima se koristi metoda find():
+                    U sljedećem primjeru možemo vidjeti kako je koristi metodu find():
                 </p>
                 <div class="align-image">
                     <img class="code-image code-image4 edit2" src="./python26.png" alt="" />
                 </div>
                 <p>
-                    U navedenim primjerima pretraživali smo riječi koje nisu sadržavale zadanu vrijednost ili se ta vrijednost samo jedanput pojavila.
-                    No, zadane se vrijednosti vrlo česte pojavljuju više puta unutar znakovnog niza. <br><br> S obzirom na to a metoda <span>find()</span>
+                    U navedenim primjerima pretraživali smo riječi koje nisu sadržavale zadanu vrijednost ili se ta vrijednost pojavljuje samo jedanput.
+                    No, zadane se vrijednosti vrlo često pojavljuju više puta unutar znakovnog niza. <br><br> S obzirom na to da metoda <span>find()</span>
                     bilježi samo mjesto prvog pojavljivanja zadane vrijednosti unutar znakovnog niza, moramo pronaći neki drugi način kojim ćemo
                     zabilježiti sva mjesta na kojima se pojavljuje zadana vrijednost. <br><br>Sljedeća slika prikazuje prijedlog rješenja u kojemu se koristi
                     lista podataka za pohranjivanje svih mjesta na kojima se nalazi zadana vrijednost.
@@ -33,7 +35,7 @@
                     <img class="code-image code-image4 edit2" src="./python27.png" alt="" />
                 </div>
                 <p>
-                    Također, sva pravila koje vijede za znakovne nizove koristeći metodu find() vrijede i za liste.
+                    Također, sva pravila koja vrijede za znakovne nizove koristeći metodu find() vrijede i za liste.
                 </p>
             </div>
             <div class="buttons-align">
@@ -41,12 +43,16 @@
                 <router-link to="/sedmi/3cjelina/6/" class="button-alignment2 button-alignment">Nastavi</router-link>
             </div>
         </div>
-    </div>  
+    </div> 
+    </div>   
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -132,8 +138,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60vw;
-  height: 20vh;
+  width: 70vw;
+  height: 27vh;
   margin-top: 15px;
   border: 10px solid #d4c224;
   text-align: center;
@@ -160,9 +166,17 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #d4c224;
+}
+
+@media only screen and (max-width: 300px) {
+  .header {
+    height: 32vh;
+    width: 100vw;
+    font-size: 0.9em;
+  }
 }
 .main-header {
   display: flex;

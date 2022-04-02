@@ -1,8 +1,10 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
-            <h2 class="header-h2">3. Račualno razmišljanje i programiranje</h2>
+            <h2 class="header-h2">3. Računalno razmišljanje i programiranje</h2>
         </div>
         <div class="main">
             <div class="main-header">
@@ -78,16 +80,16 @@
                 <h3>Stvaranje liste od ulaznih vrijednosti</h3>
                 <p>
                     U prethodnom smo zadatku prikazali stvaranje lista podataka od zadanog broja ulaznih vrijednosti, ali što ako želimo pitati korisnika 
-                    za ulazne vrijednosti i pretvoriti to u listu? To ćemo napraviti s funkcijama <span>input()</span> i <span>split()</span>. Funkcija input() prima
+                    za ulazne vrijednosti i pretvoriti ih u listu? To ćemo napraviti s funkcijama <span>input()</span> i <span>split()</span>. Funkcija input() prima
                     ulaz od korisnika u obliku znakovnog niza, a metoda split() kreira listu na način da dijeli elemente u različite elemente liste ako su odvojeni razmakom.
-                    Npr. ako pozovemo metodu split() na znakovni niz vrijednosti 'Miš Tipkovnica Slušalice', dobijemo listu znakovnih nizova vrijednošću ["Miš", "Tipkovnica", "Slušalice"]
+                    Npr. ako pozovemo metodu split() na znakovni niz vrijednosti 'Miš Tipkovnica Slušalice', dobijemo listu znakovnih nizova ["Miš", "Tipkovnica", "Slušalice"]
                 </p>
                 <div class="align-image">
                     <img class="code-image code-image4" src="./python24.png" alt="" />
                 </div>
                 <p>
-                    Ako u prošlom zadatku unosimo brojeve, oni će zapravo biti znakonvni nizovi, a ako ih želimo pretvoriti u cijelobrojni broj, moramo koristiti
-                    <span>for</span> petlju. Ako niste upoznati s for petljom, stisnite <a href="http://os-strozanac-podstrana.skole.hr/upload/os-strozanac-podstrana/newsattach/1014/Pythonfor.pdf">ovdje</a>. Na sljedeći način ćemo napraviti to: 
+                    Ako u prošlom zadatku unosimo brojeve, oni će zapravo biti znakovni nizovi, a ako ih želimo pretvoriti u cijelobrojni broj, moramo koristiti
+                    <span>for</span> petlju. Ako niste upoznati s for petljom, <a href="http://os-strozanac-podstrana.skole.hr/upload/os-strozanac-podstrana/newsattach/1014/Pythonfor.pdf">kliknite ovdje</a>. To ćemo napraviti na sljedeći način: 
                 </p>
                 <div class="align-image">
                     <img class="code-image code-image4" src="./python25.png" alt="" />
@@ -99,11 +101,15 @@
             </div>
         </div>
     </div> 
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -189,8 +195,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 60vw;
-  height: 20vh;
+  width: 70vw;
+  height: 27vh;
   margin-top: 15px;
   border: 10px solid #d4c224;
   text-align: center;
@@ -217,9 +223,16 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #d4c224;
+}
+@media only screen and (max-width: 300px) {
+  .header {
+    height: 32vh;
+    width: 100vw;
+    font-size: 0.9em;
+  }
 }
 .main-header {
   display: flex;

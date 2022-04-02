@@ -1,4 +1,6 @@
 <template>
+    <div>
+      <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
@@ -34,14 +36,14 @@
                     Podatke kojima koristima u Excelovim formulama povezujemo operatorima.
                     Formule upisujemo izravno u označenu ćeliju ili u traku formule (npr. =A1+B2*10)
 
-                    Ako u formulama upotrebljavamo adresu ćelije, onda će se u formulu uvrstiti vrijednoost upisana u toj ćeliji.
+                    Ako u formulama upotrebljavamo adresu ćelije, onda će se u formulu uvrstiti vrijednost upisana u toj ćeliji.
                 </p>
                 <img class="image-1" src="./tablica2.png" alt="" />
                 <h3>Što su funkcije?</h3>
                 <p>
                     Jedan od elemenata u formuli može biti i funkcija.
-                    <span>Funkcije</span> se unaprijed definirane formule koje izvode izračune uz pomoć određenih <span>vrijednosti</span>
-                    (<span>argumenata</span>), točno zadanim redosljedom. Argumenti mogu biti:
+                    <span>Funkcije</span> su unaprijed definirane formule koje izvode izračune uz pomoć određenih <span>vrijednosti</span>
+                    (<span>argumenata</span>), točno zadanim redoslijedom. Argumenti mogu biti:
                 </p>
                 <ul>
                     <li>brojevne vrijednosti</li>
@@ -54,12 +56,12 @@
                 <h4>Pravilo pisanja funkcije (Sintaksa funkcije)</h4>
                 <p>
                     <br>
-                    Funkcija se počinje pisati s znakom jednakosti (=), nakon čega slijedi naziv funkcije, otvorena obla zagrada, argumenti odvojeni zarezima ili dvotočkom
-                    ili dvotočkom te zatvorena obla zagrada.
+                    Funkcija se počinje pisati s znakom jednakosti (=), nakon čega slijedi naziv funkcije, otvorena obla zagrada, argumenti odvojeni zarezima ili dvotočkom,
+                    te zatvorena obla zagrada.
                     <br><br>
                     Ako pišemo dvotočku između argumenata, funkcija će raditi promjene koristeći samo te adrese, ali ako pišemo dvotočku između
-                    argumenata onda funkcija će raditi promjene koristeći sav prostor između tih adresa (uključujući te adrese).
-                    Na primjer, ako napišemo "=sum(a1:b3)", ćelija u kojoj smo napisali tu funkciju promjeniti će vrijednost na zbroj adresa A1, A2
+                    argumenata onda će funkcija raditi promjene koristeći sav prostor između tih adresa (uključujući te adrese).
+                    Na primjer, ako napišemo "=sum(a1:b3)", ćelija u kojoj smo napisali tu funkciju promjeniti će vrijednost na zbroj adresa A1, A2,
                     A3, B1, B2 i B3.
                     <br><br>
                     Neke od najčešćih funkcija koje ćemo koristiti su:
@@ -67,7 +69,7 @@
                 <img class="image-1" src="./tablica3.png" alt="" />
                 <h3>Ostale funkcije Excela</h3>
                 <p>
-                    U Excelu postoje još mnogo mnogo funkcija.
+                    U Excelu postoje još veliki broj funkcija.
                     Sve Excelove funkcije možemo naći na kartici Formule, u grupi Biblioteka funkcija.
                     Vrste formula su:
                 </p>
@@ -83,16 +85,16 @@
                 </ul>
                 <h3>Ugnježđivanje funkcija u Excelu</h3>
                 <p>
-                    Unutar jedne funkcije, možemo koristiti druge funkcije kao argumenti.
+                    Unutar jedne funkcije možemo koristiti druge funkcije kao argumente.
                     Npr.
                     =IF(SUM(A1:D4)>AVERAGE(E1:H4); "Zbroj je veći od prosjeka"; "Zbroj nije veći od prosjeka")
                     U primjeru, unutar funkcije IF su ugrađene funkcije SUM i AVERAGE.
                 </p>
                 <h3>Nizovi podataka</h3>
                 <p>
-                    Ako selektiramo odabranu ćeliju, u doljnjem-desnom kutu se nalazi jedan maleni crni kvadrat kojeg nazivamo
+                    Ako selektiramo odabranu ćeliju, u donjem desnom kutu se nalazi mali crni kvadrat kojeg nazivamo
                     ručica za popunjavanje.
-                    Ako držimo ručicu i držeći mičemo miš, više ćelija od jednom se mogu odabrati.
+                    Ako držimo ručicu i mičemo miš, odjednom moožem odabrati više ćelija.
                 </p>
             </div>
             <div class="buttons-align">
@@ -101,13 +103,18 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
+
 
 <style scoped>
 .image-1 {
@@ -195,7 +202,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #66919a;
 }

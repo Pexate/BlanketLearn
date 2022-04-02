@@ -1,6 +1,8 @@
 <template>
+  <div class="color">
+    <Navbar class="navbar1" :image="require('../../assets/inndex.jpg')" />
     <div class="outside-wrapper">
-        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #66919a">3. Internet - život na mreži</h1>
+        <h1 class="pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #66919a">2. Proračunske tablice</h1>
         <div class="div-pitanja question-wrapper"  style="box-shadow: 0px 0px 10px 10px #66919a">
             <div class="aligning">
                 <div class="pitanje">
@@ -20,7 +22,7 @@
                 </div>
                 <hr style="box-shadow: 0px 0px 5px 5px #66919a">
                 <div class="pitanje">
-                    <h3 class="text-pitanja">3. Grafikone koji koristimo za uspoređivanje unesenih vrijednosti zove se
+                    <h3 class="text-pitanja">3. Grafikone koji koristimo za uspoređivanje unesenih vrijednosti zovu se
                         <select class="multiple-choice" name="pitanje-1" id="pitanje-1">
                             <option value="odaberi">Odaberi</option>
                             <option value="one">linijski i površinski</option>
@@ -32,14 +34,16 @@
                 </div>
                 <div class="bottom">
                     <button style="box-shadow: 0px 0px 5px 5px #66919a" v-on:click="provjeriOdgovore()">Provjeri</button>
-                    <button class="dalje"><a href="/learningpage">Preskoći</a></button>
+                    <button class="dalje"><a href="/learningpage">Preskoči</a></button>
                 </div>
             </div>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
+import Navbar from "../../components/NavBar.vue"
 const odgovori = [["stupčasti", "stupcasti", "stupćasti", "stupčasti grafikon", "stupcasti grafikon", "stupćasti grafikon", "trakasti", "trakasti grafikon", "linijski", "linijski grafikon", "površinski", "povrsinski", "površinski grafikon", "povrsinski grafikon", "tortni", "tortni grafikon", "prstenasti", "prstenasti grafikon"]]
 const multiple_choice_odgovori = ["two", "four"]
 
@@ -88,7 +92,10 @@ export default {
                 nastaviButton.classList.add("greenishyellow-color")
             }
         }
-    }
+    },
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -134,7 +141,7 @@ template {
   margin-top: -10px;
 }
 * {
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
 }
 .pitanje {
   color: white;

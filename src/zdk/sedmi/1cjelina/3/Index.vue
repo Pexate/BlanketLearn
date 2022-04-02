@@ -1,4 +1,6 @@
 <template>
+    <div>
+     <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" /> 
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
@@ -10,10 +12,10 @@
                 <h2 class="main-title">Sigurnost na mreži</h2> <!-- {{ prop.subtitle }}} -->
             </div>
             <div class="text">
-                <h3>IKT i kako odabrani poslovi su poboljšani razvojem informatike</h3>
-                <p>U većinu današnjih institucija, najvjerovatnije možete naći zaposlenika kojeg radi na računalu.
-                Računala se koriste u velikom broju zanimanja vezanima za mnoge drugačije sektore.
-                Informatičar je posao u kojem se baviš aktivnostima vezanima za računalnu i komunikacijsku tehnologiju, prilagođavanje
+                <h3>IKT i kako su odabrano poslovi poboljšani razvojem informatike</h3>
+                <p>U većini današnjih institucija, najvjerojatnije možete naći zaposlenika koji radi na računalu.
+                Računala se koriste u velikom broju zanimanja vezanima za različite sektore.
+                Informatičar je zanimanje koja se bavi aktivnostima vezanima za računalnu i komunikacijsku tehnologiju, prilagođavanjem
                 sustava strojne i programske opreme po potrebama tvrtke u kojoj rade, pisanje računalnih programa prilagođenim potrebama
                 korisnika...            
                 </p>
@@ -51,11 +53,15 @@
             </div>
         </div>
     </div> 
+    </div> 
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -154,7 +160,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #ed5e4a;
   text-align: left;

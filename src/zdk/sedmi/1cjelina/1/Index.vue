@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" />
   <div class="wrapper987">
         <div class="header987"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1987">7.r.</h1>
@@ -10,11 +12,11 @@
                 <h2 class="main-title987">Jezik mreže, protokoli</h2> <!-- {{ prop.subtitle }}} -->
             </div>
             <div class="text987">
-                <p class="little987">Svaki dan, internet raste i dobiva sve više korisnika. Velik broj korisnika katkad prouzroči zagušenje mreše što
+                <p class="little987">Svaki dan, internet raste i dobiva sve više korisnika. Velik broj korisnika katkad prouzroči zagušenje mreže što
                 usporava ili čak privremeno onemogućuje korištenje pojedinih internetskih usluga. U svođenju opterećenja mreže na
                 najmanju mjeru, najučinkovitijim se pokazao korisničko-poslužiteljski model.</p>
                 <h3>KORISNIČKO POSLUŽITELJSKI MODEL</h3>
-                <p>Najkorišteniki komunikacijski model korišten na web-stranicama je <span>KORISNIČKO-POSLUŽITELJSKI MODEL</span>
+                <p>Najkorišteniji komunikacijski model korišten na web-stranicama je <span>KORISNIČKO-POSLUŽITELJSKI MODEL.</span>
                     U korisničko-poslužiteljskom modelu postoje dvije vrste uređaja koja su utemeljena na neravnopravnom odnosu:
                 </p>
                 <ul>
@@ -32,33 +34,33 @@
                     </li>
                 </ul>
                 <p>
-                    Poslužitelji moraju imati veliku neprekidnu računalnu snagu zbog mogućnosti povezivanja većeg broja korisnika od jednom.
+                    Poslužitelji moraju imati veliku neprekidnu računalnu snagu zbog mogućnosti povezivanja većeg broja korisnika odjednom.
                     Posebni operativni sustavi računala poslužitelja namijenjeni su istodobnoj komunikaciji s velikim brojem korisnika.
                 
-                    U računalnoj mreži, žično ili bežično, povezuje se računalo korisnik s računalom poslužiteljom, čime međusobno
+                    U računalnoj mreži, žično ili bežično, povezuje se računalo korisnik s računalom poslužiteljem, čime međusobno
                     komuniciraju.
                 </p>
                 <h3>PROPUSTNOST MREŽE (BANDWITH)</h3>
-                <p>Zamislimo jednu vrlo slabu mrežu, na kojoj je povezano više računala koja od jednom zahtjevljuju nešto od mreže.
+                <p>Zamislimo jednu vrlo slabu mrežu, na kojoj je povezano više računala koja odjednom zahtjevljuju nešto od mreže.
                     Naravno, mreža se usporava i sporija je "brzina".
                     Tu "brzinu" mreže nazivamo propusnost veze (bandwith) i s njom izražujemo koliko treba paketu (informaciji) da se vrati
                     korisniku nakon slanja. Propusnost veze mjeri se najčešće u megabitovima po sekundi (Mbps), ali ponekad i u bitovima po
-                    sekundi (bps)
-                    Što je propusnost veća, to više računala mogu biti povezana od jednom.
+                    sekundi (bps).
+                    Što je propusnost veća, to više računala mogu biti povezana odjednom.
                 </p>
                 <h3>KOMUNIKACIJA KORISNIKA I POSLUŽITELJA</h3>
-                <p>Kada korisnik zatražuje nešto od poslužitelja, događa se proces koji se dijeli na 3 kljućna dijela:</p>
+                <p>Kada korisnik zatražuje nešto od poslužitelja, događa se proces koji se dijeli na 3 ključna dijela:</p>
                 <ol>
                     <li><span>upit</span> - korisnik šalje zahtjev za obavljanje usluge</li>
                     <li><span>obrada</span> - poslužitelj obrađuje zahtjev korisnika</li>
                     <li><span>odgovor</span> - poslužitelj odgovara na zahtjev korisnika</li>
                 </ol>
                 <p>Nakon odgovora, poslužitelj prilazi u stanje čekanja i kada sljedeći korisnik šalje upit, proces se ponavlja.
-                   Promet podataka i usluga teče prema unaprijed zadanim pravilima koja se nazivaju <span>PROTOKOLI</span>
+                   Promet podataka i usluga teče prema unaprijed zadanim pravilima koja se nazivaju <span>PROTOKOLI</span>.
                 </p>
                 <h3>VRSTE POSLUŽITELJA I PROTOKOLA</h3>
-                <p>Poslužitelje razvrstajemo po vrsti usluga koju pružaju korisnicima. Usluge i podatci su univerzalno prenošeni držajući
-                se unaprijed definiranih pravila norma tj. protokola.
+                <p>Poslužitelje razvrstavamo po vrsti usluga koju pružaju korisnicima. Usluge i podatci su univerzalno prenošeni držeći
+                se unaprijed definiranih pravila normi tj. protokola.
                 Protokol je svojezvrsni jezik s pomoću kojega komuniciraju računala na mreži. 
                 Neki od najkorištenijih protokola su:
                 </p>
@@ -84,11 +86,15 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -179,7 +185,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #ed5e4a;
   text-align: left;

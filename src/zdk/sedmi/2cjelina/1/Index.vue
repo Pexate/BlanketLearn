@@ -1,4 +1,6 @@
 <template>
+    <div>
+     <Navbar class="navbar1" :image="require('../../../../assets/inndex.jpg')" /> 
     <div class="wrapper">
         <div class="header"> <!-- {{ prop.title }}} -->
             <h1 class="header-h1">7.r.</h1>
@@ -12,7 +14,7 @@
             <div class="text">
                 <h3>Što su proračunske tablice?</h3>
                 <p>
-                    <span>Proračunske tablice</span> su programi koje služe za prikaz i obradu različitih podataka u tablicama i grafovima radi
+                    <span>Proračunske tablice</span> su programi za prikaz i obradu različitih podataka u tablicama i grafovima radi
                     organizacije ili boljeg razumijevanja.
                     
                     Program koji ćemo koristiti za kreiranje proračunskih tablica također je najpopularniji program za rađenje proračunskih
@@ -30,15 +32,15 @@
                     Radni se list sastoji od <span>ćelija složenih u retke i stupce</span>.
                     <br><br>
                     Stupci su označeni <span>tekstualnom vrijednošću</span> duljinom jednog znaka (A, B, C itd.), dva znaka (AA, AB, AC itd.) ili tri
-                    znaka (AAA, AAB, AAC itd.) prolazeči kroz svaki <span>znak u engleskoj abecedi</span>.
+                    znaka (AAA, AAB, AAC itd.) prolazeći kroz svaki <span>znak u engleskoj abecedi</span>.
                     <br><br>
-                    Redci su označeni <span>numeričnom vrijednošću</span> (1, 2, 3 itd.), počinje se brojiti <span>od 1 do 1,048,576 ili 2²⁰ </span>(dva na dvadesetu
+                    Redci su označeni <span>numeričkom vrijednošću</span> (1, 2, 3 itd.), počinje se brojiti <span>od 1 do 1,048,576 ili 2²⁰ </span>(dva na dvadesetu
                     potenciju)
                     <br><br>
-                    Ćelije su odvojene okomitim i vodoravnim crtama koje nisu vidljive pri ispisu na papir, osim ako drukčije ne odredimo.
+                    Ćelije su odvojene okomitim i vodoravnim crtama koje nisu vidljive pri ispisu na papir, osim ako drugačije ne odredimo.
                     <br><br>
                     Svaka ćelija ima svoju <span>adresu</span>, to jest vrijednost stupca i redka u kojem se ćelija nalazi (npr. stupac A i redak 3 će
-                    biti A3). Adresu ćelije možemo nači u <span>Okviru naziva</span>.
+                    biti A3). Adresu ćelije možemo naći u <span>Okviru naziva</span>.
 
                 </p>
                 <h3>Kako upisujemo podatke u ćelije?</h3>
@@ -56,13 +58,13 @@
                     <li><span>Formule</span></li>
                 </ul>
                 <p>
-                    Excel automatski poravnava numerične vrijednosti uz desni, a tekstualne uz lijevi rub aktivne ćelije.
+                    Excel automatski poravnava numeričke vrijednosti uz desni, a tekstualne uz lijevi rub aktivne ćelije.
                 </p>
                 <h3>Kako urediti tablice?</h3>
                 <p>
                     Nakon što smo upisali podatke u tablicu, možemo ih urediti.
                     <br><br>
-                    Ako se u ćeliji ne vidi sav napisani tekst, tada je potrebno <span>promijeniti visinu retka ili širinu retka</span>.
+                    Ako se u ćeliji ne vidi sav napisani tekst, tada je potrebno <span>promijeniti visinu retka ili širinu stupca</span>.
                     <br><br>
                     Najprije moramo <span>označiti</span> (<span>selektirati</span>) stupac ili redak, a zatim odabrati gumb <span>Oblikovanje</span> (<span>Format</span>), koji se nalazi u
                     grupi <span>Ćelije</span> (<span>Cells</span>) na kartici <span>Polazno</span> (<span>Home</span>) te izabrati odgovarajuću naredbu na padajućem izborniku.
@@ -73,13 +75,13 @@
                     Dijaloški okvir Oblikovanje ćelija omogućuje nam odabir:
                 </p>
                 <ul>
-                    <li><span>Poravnavanje</span> - poravnanje, kontrolu i smjer te usmjerenje teksta</li>
+                    <li><span>Poravnavanje</span> - poravnanje, kontrolu i smjer, te usmjerenje teksta</li>
                     <li><span>Font</span> - vrstu, stil, veličinu i boju fonta</li>
                     <li><span>Obrub</span> - vrstu, širinu i boje obruba</li>
-                    <li><span>Ispuna</span> - boju pozadine, efekata ispune te boju i stil uzroka</li>
+                    <li><span>Ispuna</span> - boju pozadine, efekata ispune, te boju i stil uzroka</li>
                 </ul>
                 <p>
-                    Naredbom <span>Spremi</span> kao također možemo spremiti radnu knjigu pod nekim nazivom.
+                    Naredbom <span>Spremi kao</span> također možemo spremiti radnu knjigu pod nekim nazivom.
                 </p>
             </div>
             <div class="buttons-align">
@@ -88,11 +90,15 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
+import Navbar from "../../../../components/NavBar.vue"
 export default {
-
+  components: {
+    Navbar,
+  }
 }
 </script>
 
@@ -168,7 +174,7 @@ export default {
   padding: 25px;
   background: #313131;
   color: white;
-  font-family: Ubuntu, Helvetica, Arial;
+  font-family: Helvetica, Arial;
   font-size: 1.2em;
   border: 10px solid #66919a;
 }
